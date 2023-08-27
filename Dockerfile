@@ -13,6 +13,7 @@ RUN mkdir logs
 EXPOSE 8000
 
 COPY login/ /srv/login
+COPY templates/ /srv/templates
 COPY manage.py /srv
 
 WORKDIR /srv
