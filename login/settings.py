@@ -126,6 +126,7 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 HOST = getenv('HOST')
+MC_URL = getenv('MC_URL', 'http://localhost:3000')
 IDP_CLIENT_ID = getenv('OAUTH_CLIENT_ID')
 IDP_CLIENT_SECRET = getenv('OAUTH_CLIENT_SECRET')
 IDP_REDIRECT_URL = f'{HOST}/callback'

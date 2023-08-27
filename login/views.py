@@ -24,7 +24,7 @@ class AuthorizeView(LoginRequiredMixin, View):
         if link.mc_uuid != uuid:
             return HttpResponseForbidden("Already linked")
 
-        post("http://localhost:3000/authorize", json={
+        post(f"{settings.MC_URL}/authorize", json={
             'target': str(uuid),
             'firstName': request.user.first_name
         })
